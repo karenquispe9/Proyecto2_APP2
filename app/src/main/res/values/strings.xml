@@ -11,4 +11,11 @@
     <string name="contraseña_input">Contraseña</string>
     <string name="no_recuerdas_la_contrase_a">¿No recuerdas la contraseña?</string>
     <string name="entrar">Entrar</string>
+    <string name="ya_tienes_cuenta_inicia_sesion">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="nombre_de_usuario">NOMBRE DE USUARIO</string>
+    <string name="confirmar_contrase_a">Confirmar contraseña</string>
+    <string name="acepto_los_t_rminos_y_condiciones">Acepto los términos y condiciones</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="ya_tienes_cuenta">Ya tienes cuenta?</string>
+    <string name="nombre" />
 </resources>
