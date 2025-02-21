@@ -77,6 +77,7 @@
         android:hint="@string/nombre"
         android:padding="10dp"
         android:textColor="@android:color/black"
+        android:fontFamily="@font/lato_regular"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -127,23 +128,57 @@
         android:layout_marginStart="40dp"/>
 
     <!-- Input Contraseña -->
+
     <EditText
         android:id="@+id/edtContrasena"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:hint="@string/contraseña_input"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/rounded_input"
+        android:fontFamily="@font/lato_regular"
+        android:hint="@string/contraseña_input"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtCorreo"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginTop="50dp"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtCorreo" />
 
+    <!--
+
+    <CheckBox
+        android:id="@+id/terms_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/acepto_los_t_rminos_y_condiciones"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtContrasena" />
+
+        -->
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/white"
+        android:text="Siguiente"
+        android:textColor="@color/naranja_letra_boton"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtContrasena" />
 
 
     <!--
