@@ -21,11 +21,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nuevoPost"
-            android:fontFamily=""
-            android:textSize="18sp"
+            android:fontFamily="@font/lalezar_regular"
+            android:textSize="50sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
-            android:textColor="#000000" />
+            android:textColor="@color/naranja_fondo_yboton" />
 
         <!-- Usuario @user19424 -->
         <TextView
@@ -63,8 +63,9 @@
             android:layout_below="@id/editTextPost"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#6200EE"
-            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/naranja_fondo_yboton"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/black"
             android:paddingHorizontal="24dp"
             android:paddingVertical="8dp" />
 
