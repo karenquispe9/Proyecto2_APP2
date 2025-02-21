@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nuevoPost">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <!-- Encabezado "petmatch" -->
+
+        <!-- Nuevo POST -->
+        <TextView
+            android:id="@+id/textViewNewPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nuevoPost"
+            android:fontFamily="@font/lalezar_regular"
+            android:textSize="50sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/naranja_fondo_yboton" />
+
+        <!-- Usuario @user19424 -->
+        <TextView
+            android:id="@+id/textViewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@user19424"
+            android:textSize="16sp"
+            android:layout_below="@id/textViewNewPost"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000" />
+
+        <!-- Campo de texto para escribir algo -->
+        <EditText
+            android:id="@+id/editTextPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe algo aqui..."
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top|start"
+            android:layout_below="@id/textViewUser"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:drawable/editbox_background"
+            android:padding="8dp" />
+
+        <!-- Botón para publicar -->
+        <Button
+            android:id="@+id/buttonPublicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publicar"
+            android:layout_below="@id/editTextPost"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/naranja_fondo_yboton"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/black"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
