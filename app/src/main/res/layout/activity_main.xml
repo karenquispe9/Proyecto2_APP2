@@ -1,41 +1,48 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_petmatch">
+    >
 
     <!-- Logo -->
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/logo_bienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="logo_app"
         android:src="@drawable/logo_petmatch"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp" />
 
-    <!-- Botón Iniciar Sesión -->
+
     <Button
         android:id="@+id/btn_iniciar_sesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar sesión"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
-        android:layout_below="@id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_below="@id/logo_bienvenida"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="158dp"
+        android:layout_marginEnd="143dp"
+        android:backgroundTint="@color/naranja_fondo_yboton"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/iniciar_sesion"
+        android:textColor="@color/white" />
 
-    <!-- Botón Registrarse -->
     <Button
         android:id="@+id/btn_registrarse"
-        android:layout_width="wrap_content"
+        android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:text="Registrarse"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
         android:layout_below="@id/btn_iniciar_sesion"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="140dp"
+        android:backgroundTint="@color/naranja_fondo_yboton"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/registrarse"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
