@@ -1,0 +1,27 @@
+<!-- res/menu/bottom_nav_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_item1"
+        android:icon="@drawable/ic_item1" <!-- Icono para el primer ítem -->
+    android:title="Item 1"/><!-- Título del primer ítem -->
+
+    <item
+        android:id="@+id/nav_item2"
+        android:icon="@drawable/ic_item2" <!-- Icono para el segundo ítem -->
+    android:title="Item 2"/> <!-- Título del segundo ítem -->
+
+    <item
+        android:id="@+id/nav_item3"
+        android:icon="@drawable/ic_item3" <!-- Icono para el tercer ítem -->
+    android:title="Item 3"/> <!-- Título del tercer ítem -->
+
+    <item
+        android:id="@+id/nav_item4"
+        android:icon="@drawable/ic_item4" <!-- Icono para el cuarto ítem -->
+    android:title="Item 4"/> <!-- Título del cuarto ítem -->
+
+    <item
+        android:id="@+id/nav_item5"
+        android:icon="@drawable/ic_item5" <!-- Icono para el quinto ítem -->
+    android:title="Item 5"/> <!-- Título del quinto ítem -->
+</menu>
