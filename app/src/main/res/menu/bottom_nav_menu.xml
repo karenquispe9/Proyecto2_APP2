@@ -1,0 +1,27 @@
+<!-- res/menu/bottom_nav_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/boton1"
+        android:icon="@drawable/mas"
+        android:title="no se muestra" />
+
+    <item
+        android:id="@+id/boton2"
+        android:icon="@drawable/buscar"
+        android:title="tonto" />
+
+    <item
+        android:id="@+id/boton3"
+        android:icon="@drawable/huella"
+        android:title="malo" />
+
+    <item
+        android:id="@+id/boton4"
+        android:icon="@drawable/carrito"
+        android:title="gilipuerta" />
+
+    <item
+        android:id="@+id/boton5"
+        android:icon="@drawable/perfil"
+        android:title="mari cong" />
+</menu>
