@@ -148,34 +148,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtCorreo" />
 
-    <!--
-
     <CheckBox
         android:id="@+id/terms_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="321dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
         android:text="@string/acepto_los_t_rminos_y_condiciones"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtContrasena" />
 
-        -->
-
     <Button
         android:id="@+id/btnEntrar"
+        style="@style/ButtonOrange"
         android:layout_width="175dp"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="40dp"
-        android:backgroundTint="@color/white"
-        android:text="Siguiente"
+        android:text="@string/siguiente"
         android:textColor="@color/naranja_letra_boton"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:background="@drawable/rounded_button"
+        android:textStyle="@font/lato_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtContrasena" />
