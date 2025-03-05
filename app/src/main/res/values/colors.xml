@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="naranja_fondo_yboton">#FF9900</color>
-    <color name="naranja_letra_boton">#E28800</color>
+    <color name="naranja_fondo_yboton">#FFFF9900</color>
+    <color name="naranja_letra_boton">#FFE28800</color>
 
 </resources>

@@ -2,45 +2,112 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@color/white">
 
-    <!-- Logo -->
     <ImageView
-        android:id="@+id/logo_bienvenida"
-        android:layout_width="wrap_content"
+        android:id="@+id/logo_letras"
+        android:layout_width="395dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:src="@drawable/logo_petmatch_letra" />
+    <!-- Scroll horizontal en el medio de la pantalla -->
+    <HorizontalScrollView
+        android:id="@+id/miScrollView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="logo_app"
-        android:src="@drawable/logo_petmatch"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp" />
+        android:padding="16dp"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="35dp">
+
+            <!-- Elementos dentro del Scroll -->
+
+            <ImageView
+                android:id="@+id/fotoScroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:contentDescription="@string/foto1"
+                android:paddingTop="50dp"
+                android:src="@drawable/scroll1" />
+
+            <ImageView
+                android:id="@+id/fotoScroll1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:contentDescription="@string/foto2"
+                android:paddingTop="50dp"
+                android:src="@drawable/scroll2" />
+
+            <ImageView
+                android:id="@+id/fotoScroll2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:contentDescription="@string/foto3"
+                android:paddingTop="50dp"
+                android:src="@drawable/scroll3" />
+
+            <ImageView
+                android:id="@+id/fotoScroll3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:contentDescription="@string/foto4"
+                android:paddingTop="50dp"
+                android:src="@drawable/scroll4" />
+
+            <ImageView
+                android:id="@+id/fotoScroll4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:contentDescription="@string/foto5"
+                android:paddingTop="50dp"
+                android:src="@drawable/scroll5" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
 
     <Button
         android:id="@+id/btn_iniciar_sesion"
-        android:layout_width="wrap_content"
+        android:layout_width="145dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo_bienvenida"
+        android:layout_below="@id/miScrollView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="158dp"
-        android:layout_marginEnd="143dp"
-        android:backgroundTint="@color/naranja_fondo_yboton"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="122dp"
+        android:background="@drawable/rounded_button"
         android:fontFamily="@font/lato_bold"
         android:text="@string/iniciar_sesion"
         android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btn_registrarse"
-        android:layout_width="136dp"
+        android:layout_width="145dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_iniciar_sesion"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="140dp"
-        android:backgroundTint="@color/naranja_fondo_yboton"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="122dp"
+        android:background="@drawable/rounded_button"
         android:fontFamily="@font/lato_bold"
         android:text="@string/registrarse"
         android:textColor="@color/white" />
