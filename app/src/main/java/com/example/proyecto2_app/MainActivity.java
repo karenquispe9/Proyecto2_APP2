@@ -24,12 +24,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Referenciar el botón
         Button btn_iniciar_session = findViewById(R.id.btn_iniciar_sesion );
         Button btn_registrarse = findViewById(R.id. btn_registrarse);
         miScrollView = findViewById(R.id.miScrollView);
 
-        // Agregar la funcionalidad al hacer clic al boton de inicio de sesion
+
         btn_iniciar_session.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Agregar la funcionalidad al hacer clic al boton de registrarse
         btn_registrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
