@@ -3,25 +3,25 @@
     <item
         android:id="@+id/boton1"
         android:icon="@drawable/mas"
-        android:title="no se muestra" />
+        android:title="Nuevo post" />
 
     <item
         android:id="@+id/boton2"
         android:icon="@drawable/buscar"
-        android:title="tonto" />
+        android:title="Buscar" />
 
     <item
         android:id="@+id/boton3"
         android:icon="@drawable/huella"
-        android:title="malo" />
+        android:title="Inicio" />
 
     <item
         android:id="@+id/boton4"
         android:icon="@drawable/carrito"
-        android:title="gilipuerta" />
+        android:title="Tienda" />
 
     <item
         android:id="@+id/boton5"
         android:icon="@drawable/perfil"
-        android:title="mari cong" />
+        android:title="Perfil" />
 </menu>

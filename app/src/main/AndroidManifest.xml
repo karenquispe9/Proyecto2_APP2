@@ -31,6 +31,9 @@
             android:name=".Registrarse"
             android:exported="false" />
         <activity
+            android:name=".NuevoPost"
+            android:exported="false" />
+        <activity
             android:name=".IniciarSesion"
             android:exported="false" />
         <activity
