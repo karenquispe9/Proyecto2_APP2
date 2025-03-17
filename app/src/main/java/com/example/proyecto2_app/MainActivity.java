@@ -51,30 +51,6 @@ public class MainActivity extends AppCompatActivity {
             iniciarAutoScroll();
         }
 
-        /* Detectar si el usuario está desplazando manualmente
-        miScrollView.setOnTouchListener(new View.OnTouchListener() {
-            boolean userScrolling = false;
-            Handler handler = new Handler(Looper.getMainLooper());
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    userScrolling = true;  // Usuario toca el scroll
-                    handler.removeCallbacks(autoScrollRunnable); // Detener auto-scroll
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            userScrolling = false;
-                            iniciarAutoScroll(); // Reanudar después de 5 segundos sin tocar
-                        }
-                    }, 5000);
-                }
-                return false; // Permitir que el evento continúe propagándose
-            }
-        });*/
-
-
     }
 
 
@@ -84,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             if (!userScrolling && miScrollView.getChildAt(0) != null) {
                 int maxScroll = miScrollView.getChildAt(0).getWidth() - miScrollView.getWidth();
-                scrollX += 1000; // Ajusta la cantidad de desplazamiento
+                scrollX += 995; // Ajusta la cantidad de desplazamiento
 
                 if (scrollX >= maxScroll) {
                     scrollX = 0; // Reiniciar si llega al final
@@ -92,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
                 miScrollView.smoothScrollTo(scrollX, 0);
             }
-            handler.postDelayed(this, 5000); // Repetir cada 5 segundos
+            handler.postDelayed(this, 4000); // Repetir cada 5 segundos
         }
     };
 
     private void iniciarAutoScroll() {
-        handler.postDelayed(autoScrollRunnable, 5000); // Iniciar después de 5 segundos
+        handler.postDelayed(autoScrollRunnable, 1500); // Iniciar después de 5 segundos
     }
 
     @Override
