@@ -7,6 +7,10 @@ import com.google.android.material.navigation.NavigationBarView;
 public class NavegacionBarra {
 
     public static void setupBottomNavigationView(NavigationBarView bottomNav, Context context) {
+        if (bottomNav == null) {
+            return; // Si no hay BottomNavigationView, no hacer nada
+        }
+
         bottomNav.setOnItemSelectedListener(item -> {
             int id = item.getItemId(); // Obtener el ID del ítem seleccionado
 

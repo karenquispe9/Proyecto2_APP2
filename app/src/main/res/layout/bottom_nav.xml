@@ -22,6 +22,7 @@
         app:itemIconSize="32dp"
         android:background="@android:color/white"
         app:itemIconTint="@color/fondo_naranja"
+        app:itemRippleColor="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider"
