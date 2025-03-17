@@ -13,16 +13,16 @@
         android:theme="@style/Theme.Proyecto2_APP"
         tools:targetApi="31">
         <activity
-            android:name=".perfil"
+            android:name=".Perfil"
             android:exported="false" />
         <activity
-            android:name=".tienda"
+            android:name=".Tienda"
             android:exported="false" />
         <activity
-            android:name=".buscar"
+            android:name=".Buscar"
             android:exported="false" />
         <activity
-            android:name=".pagina_inicio"
+            android:name=".PaginaInicio"
             android:exported="false" />
         <activity
             android:name=".Registrarse"

@@ -20,7 +20,7 @@ public class IniciarSesion extends AppCompatActivity {
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IniciarSesion.this, pagina_inicio.class);
+                Intent intent = new Intent(IniciarSesion.this, PaginaInicio.class);
                 startActivity(intent); // Inicia la nueva actividad
             }
         });

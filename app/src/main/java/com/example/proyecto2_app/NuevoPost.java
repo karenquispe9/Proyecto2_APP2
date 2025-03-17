@@ -1,22 +1,18 @@
 package com.example.proyecto2_app;
 
 import android.os.Bundle;
+import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class buscar extends AppCompatActivity {
+public class NuevoPost extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_buscar);
+        setContentView(R.layout.activity_nuevo_post);
 
         // Obtener referencia al BottomNavigationView
         BottomNavigationView bottomNav = findViewById(R.id.bottom_nav_view);
@@ -24,5 +20,9 @@ public class buscar extends AppCompatActivity {
         // Configurar la navegación usando el método reutilizable
         NavegacionBarra.setupBottomNavigationView(bottomNav, this);
 
+    }
+
+    public void IrAtras(View vista) {
+        finish();
     }
 }
