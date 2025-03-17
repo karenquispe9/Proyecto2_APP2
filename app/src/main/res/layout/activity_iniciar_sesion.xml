@@ -143,7 +143,6 @@
         android:textColor="@color/letra_boton_naranja"
         android:textSize="18sp"
         android:fontFamily="@font/lato_bold"
-        style="@style/ButtonOrange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtOlvidarContrasena" />

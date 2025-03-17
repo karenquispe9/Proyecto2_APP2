@@ -163,13 +163,14 @@
     <!--suppress AndroidDomInspection -->
     <Button
         android:id="@+id/btnSiguiente"
-        style="@style/ButtonWhite"
         android:layout_width="175dp"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="40dp"
         android:text="@string/siguiente"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/letra_boton_naranja"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

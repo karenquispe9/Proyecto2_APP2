@@ -1,19 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Proyecto2_APP" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorButtonNormal">@color/white</item> <!-- Opcional, fuerza que los botones sean blancos por defecto -->
 
 
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="ButtonOrange" parent="Widget.AppCompat.Button">
+    <style name="ButtonOrange" parent="Widget.Material3.Button">
         <item name="android:background">@drawable/boton_redondo_naranja</item>
+        <item name="android:backgroundTint">@color/letra_boton_naranja</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="ButtonWhite" parent="Widget.AppCompat.Button">
+    <style name="ButtonWhite" parent="Widget.Material3.Button">
         <item name="android:background">@drawable/boton_redondo_blanco</item>
+        <item name="android:textColor">@color/letra_boton_naranja</item>
+        <item name= "android:backgroundTint">@color/white</item>"
     </style>
+
 
     <style name="Theme.Proyecto2_APP" parent="Base.Theme.Proyecto2_APP" />
 </resources>
