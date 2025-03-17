@@ -12,9 +12,10 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Incluir el cabezal -->
+        <!-- Incluir el cabezal --> 
         <include
             layout="@layout/header_basico"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

@@ -14,12 +14,6 @@ public class NuevoPost extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuevo_post);
 
-        // Obtener referencia al BottomNavigationView
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav_view);
-
-        // Configurar la navegación usando el método reutilizable
-        NavegacionBarra.setupBottomNavigationView(bottomNav, this);
-
     }
 
     public void IrAtras(View vista) {
