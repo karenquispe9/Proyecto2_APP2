@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ public class Registrarse extends AppCompatActivity {
     private EditText edtNombreUsuario, edtCorreo, edtContrasena;
     private CheckBox checkBoxTerminos;
     private Button btnSiguiente;
+    private TextView txtIniciarSesion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class Registrarse extends AppCompatActivity {
         edtContrasena = findViewById(R.id.edtContrasena);
         checkBoxTerminos = findViewById(R.id.terms_checkbox);
         btnSiguiente = findViewById(R.id.btnSiguiente);
+        txtIniciarSesion = findViewById(R.id.txtIniciarSesion);
 
         // Configurar el clic del botón
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +57,15 @@ public class Registrarse extends AppCompatActivity {
                     // Registrar al usuario usando Retrofit
                     registrarUsuario(usuario);
                 }
+            }
+        });
+
+        txtIniciarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Dirigiendo pagina de Inicio Sesion", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), IniciarSesion.class);
+                startActivity(intent);
             }
         });
     }
