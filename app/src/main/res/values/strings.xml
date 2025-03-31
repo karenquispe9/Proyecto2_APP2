@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Proyecto2_APP</string>
-    <string name="iniciar_sesion">INICIAR SESIÓN</string>
-    <string name="registrarse">REGISTRARSE</string>
+    <string name="registrarse">Registrarse</string>
     <string name="inicia_sesion">Inicia sesión</string>
     <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
     <string name="reg_strate">Regístrate</string>
@@ -23,5 +22,4 @@
     <string name="foto5">foto5</string>
     <string name="siguiente">SIGUIENTE</string>
     <string name="foto6" />
-
 </resources>
