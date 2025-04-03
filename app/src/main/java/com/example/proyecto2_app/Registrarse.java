@@ -16,7 +16,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Registrarse extends AppCompatActivity {
-
     private EditText edtNombreUsuario, edtCorreo, edtContrasena;
     private CheckBox checkBoxTerminos;
     private Button btnSiguiente;
@@ -27,7 +26,6 @@ public class Registrarse extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrarse);
 
-        // Inicializar vistas
         edtNombreUsuario = findViewById(R.id.NomUser);
         edtCorreo = findViewById(R.id.edtCorreo);
         edtContrasena = findViewById(R.id.edtContrasena);
@@ -35,68 +33,46 @@ public class Registrarse extends AppCompatActivity {
         btnSiguiente = findViewById(R.id.btnSiguiente);
         txtIniciarSesion = findViewById(R.id.txtIniciarSesion);
 
-        // Configurar el clic del botón
-        btnSiguiente.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Obtener los datos del formulario
-                String nombreUsuario = edtNombreUsuario.getText().toString().trim();
-                String correo = edtCorreo.getText().toString().trim();
-                String contrasena = edtContrasena.getText().toString().trim();
-                boolean aceptaTerminos = checkBoxTerminos.isChecked();
+        btnSiguiente.setOnClickListener(v -> {
+            String nombreUsuario = edtNombreUsuario.getText().toString().trim();
+            String correo = edtCorreo.getText().toString().trim();
+            String contrasena = edtContrasena.getText().toString().trim();
+            boolean aceptaTerminos = checkBoxTerminos.isChecked();
 
-                // Validar que los campos no estén vacíos y que se acepten los términos
-                if (nombreUsuario.isEmpty() || correo.isEmpty() || contrasena.isEmpty()) {
-                    Toast.makeText(Registrarse.this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
-                } else if (!aceptaTerminos) {
-                    Toast.makeText(Registrarse.this, "Debe aceptar los términos y condiciones", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Crear un objeto Usuario con los datos del formulario
-                    Usuario usuario = new Usuario(nombreUsuario, correo, contrasena, "personal", "");
-
-                    // Registrar al usuario usando Retrofit
-                    registrarUsuario(usuario);
-                }
+            if (nombreUsuario.isEmpty() || correo.isEmpty() || contrasena.isEmpty()) {
+                Toast.makeText(Registrarse.this, "Complete todos los campos", Toast.LENGTH_SHORT).show();
+            } else if (!aceptaTerminos) {
+                Toast.makeText(Registrarse.this, "Acepte los términos", Toast.LENGTH_SHORT).show();
+            } else {
+                Usuario usuario = new Usuario(nombreUsuario, correo, contrasena, "personal", "");
+                registrarUsuario(usuario);
             }
         });
 
-        txtIniciarSesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Dirigiendo pagina de Inicio Sesion", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), IniciarSesion.class);
-                startActivity(intent);
-            }
+        txtIniciarSesion.setOnClickListener(v -> {
+            startActivity(new Intent(Registrarse.this, IniciarSesion.class));
+            finish();
         });
     }
 
     private void registrarUsuario(Usuario usuario) {
-        // Obtener el servicio de la API
         ApiService apiService = RetrofitClient.getApiService();
-
-        // Realizar la solicitud POST
         Call<Void> call = apiService.registrarUsuario(usuario);
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
-                    // Si la API responde con éxito
-                    Toast.makeText(Registrarse.this, "Usuario registrado correctamente", Toast.LENGTH_SHORT).show();
-
-                    // Redirigir a la siguiente actividad
-                    Intent intent = new Intent(Registrarse.this, PaginaInicio.class);
-                    startActivity(intent);
+                    Toast.makeText(Registrarse.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Registrarse.this, IniciarSesion.class));
+                    finish();
                 } else {
-                    // Si la API responde con un error
-                    Toast.makeText(Registrarse.this, "Error al registrar el usuario", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registrarse.this, "Error en registro", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
-                // Si hay un error en la solicitud
-                Toast.makeText(Registrarse.this, "Error de conexión: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-                t.printStackTrace();
+                Toast.makeText(Registrarse.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
