@@ -21,6 +21,8 @@ public class Registrarse extends AppCompatActivity {
     private CheckBox checkBoxTerminos;
     private Button btnSiguiente;
     private TextView txtIniciarSesion;
+    //eliminar
+    private Button btnSaberMas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,16 @@ public class Registrarse extends AppCompatActivity {
         checkBoxTerminos = findViewById(R.id.terms_checkbox);
         btnSiguiente = findViewById(R.id.btnSiguiente);
         txtIniciarSesion = findViewById(R.id.txtIniciarSesion);
+
+        btnSaberMas = findViewById(R.id.btnSaberMas);
+
+        btnSaberMas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MasSobreUser.class);
+                startActivity(intent);
+            }
+        });
 
         // Configurar el clic del botón
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
