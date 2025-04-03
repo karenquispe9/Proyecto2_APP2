@@ -4,19 +4,17 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface ApiService {
-
-    // Método para registrar un usuario
     @POST("usuarios/")
     Call<Void> registrarUsuario(@Body Usuario usuario);
 
-    // Método para iniciar sesión
-    @FormUrlEncoded
-    @POST("login/")
+    @GET("login/")
     Call<LoginResponse> iniciarSesion(
-            @Field("correo") String correo,
-            @Field("contraseña") String contraseña
+            @Query("correo") String correo,
+            @Query("contraseña") String contraseña
     );
 }
