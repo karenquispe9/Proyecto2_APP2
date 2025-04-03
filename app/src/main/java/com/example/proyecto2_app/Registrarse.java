@@ -16,16 +16,20 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Registrarse extends AppCompatActivity {
+
     private EditText edtNombreUsuario, edtCorreo, edtContrasena;
     private CheckBox checkBoxTerminos;
     private Button btnSiguiente;
     private TextView txtIniciarSesion;
+    //eliminar
+    private Button btnSaberMas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrarse);
 
+        // Inicializar vistas
         edtNombreUsuario = findViewById(R.id.NomUser);
         edtCorreo = findViewById(R.id.edtCorreo);
         edtContrasena = findViewById(R.id.edtContrasena);
@@ -56,7 +60,10 @@ public class Registrarse extends AppCompatActivity {
     }
 
     private void registrarUsuario(Usuario usuario) {
+        // Obtener el servicio de la API
         ApiService apiService = RetrofitClient.getApiService();
+
+        // Realizar la solicitud POST
         Call<Void> call = apiService.registrarUsuario(usuario);
         call.enqueue(new Callback<Void>() {
             @Override
