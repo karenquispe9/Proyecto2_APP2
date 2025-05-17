@@ -10,7 +10,6 @@
     <string name="contraseña_input">Contraseña</string>
     <string name="no_recuerdas_la_contrase_a">¿No recuerdas la contraseña?</string>
     <string name="entrar">ENTRAR</string>
-    <string name="nuevoPost">Nuevo Post</string>
     <string name="nombre">Nombre</string>
     <string name="nombre_de_usuario">NOMBRE DE USUARIO</string>
     <string name="ya_tienes_cuenta">Ya tienes cuenta?</string>
@@ -20,7 +19,12 @@
     <string name="foto3">foto3</string>
     <string name="foto4">foto4</string>
     <string name="foto5">foto5</string>
+    <string name="mantener_sesion_iniciada">Mantener sesión iniciada</string>
     <string name="siguiente">SIGUIENTE</string>
+    <string name="subir_foto">Subir foto</string>
+    <string name="publicar">Publicar</string>
+    <string name="nuevo_post">Nuevo POST</string>
+
     <string name="foto6" />
     <string name="selecciona_una_opci_n">Selecciona una opción</string>
     <string name="selecciona_una_opcion_del_desplegable">Selecciona una opción del desplegable</string>

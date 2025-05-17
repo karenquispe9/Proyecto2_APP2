@@ -7,18 +7,119 @@
     android:layout_height="match_parent"
     tools:context=".NuevoPost">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-86dp"
+        tools:layout_editor_absoluteY="16dp">
 
-        <!-- Incluir el cabezal --> 
+        <!-- Incluir el cabezal -->
         <include
             layout="@layout/header_basico"
-            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/lalezar_regular"
+            android:text="@string/nuevo_post"
+            android:textAlignment="center"
+            android:textColor="@color/letra_boton_naranja"
+            android:textSize="50sp" />
+
+        <!-- Tarjeta de publicación -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <!-- Foto de perfil -->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/image_defecto"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingClass" />
+
+                <!-- Nombre de usuario -->
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Usuario"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_image"
+                    app:layout_constraintStart_toEndOf="@id/profile_image"
+                    app:layout_constraintTop_toTopOf="@id/profile_image" />
+
+                <!-- EditText de publicación -->
+                <EditText
+                    android:id="@+id/post_input"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/white"
+                    android:gravity="top|start"
+                    android:hint="Escribe algo aquí..."
+                    android:inputType="textMultiLine"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toTopOf="@id/icons_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+                <!-- Iconos inferiores -->
+                <LinearLayout
+                    android:id="@+id/icons_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/subirFoto"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/foto" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botón para publicar -->
+        <Button
+            android:id="@+id/btn_publicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="64dp"
+            android:backgroundTint="@color/letra_boton_naranja"
+            android:fontFamily="@font/lalezar_regular"
+            android:onClick="publicarPost"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="@string/publicar"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
