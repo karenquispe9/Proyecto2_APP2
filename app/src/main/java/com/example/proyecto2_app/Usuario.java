@@ -1,6 +1,10 @@
 package com.example.proyecto2_app;
+import com.google.gson.annotations.SerializedName;
+
 
 public class Usuario {
+    @SerializedName("id_usuario")
+    private int id;
     private String nombre;
     private String email;
     private String contraseña;
@@ -75,4 +79,9 @@ public class Usuario {
 
     public String getFoto_url() { return foto_url; }
     public void setFoto_url(String foto_url) { this.foto_url = foto_url; }
+
+    public int getIdUsuario() {
+        return id;
+    }
+
 }
