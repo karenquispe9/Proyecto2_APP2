@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Color de fondo -->
+    <solid android:color="@color/fondo_gris" />
+
+
+
+    <!-- Sombras (opcional) -->
+    <padding
+        android:left="10dp"
+        android:right="10dp"
+        android:top="6dp"
+        android:bottom="6dp" /> <!-- Espacio entre filas -->
+
+</shape>

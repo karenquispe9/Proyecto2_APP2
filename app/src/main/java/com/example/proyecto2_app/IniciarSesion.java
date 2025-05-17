@@ -6,6 +6,7 @@ import android.util.Log;
 import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
@@ -16,6 +17,7 @@ import java.io.IOException;
 public class IniciarSesion extends AppCompatActivity {
 
     private EditText edtCorreo, edtContrasena;
+    private TextView txtRegistrate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class IniciarSesion extends AppCompatActivity {
         edtCorreo = findViewById(R.id.edtCorreo);
         edtContrasena = findViewById(R.id.edtContrasena);
         Button btnEntrar = findViewById(R.id.btnEntrar);
+        txtRegistrate = findViewById(R.id.txtRegistrate);
 
         btnEntrar.setOnClickListener(v -> {
             String correo = edtCorreo.getText().toString().trim();
@@ -35,6 +38,12 @@ public class IniciarSesion extends AppCompatActivity {
             }
 
             iniciarSesion(correo, contrasena);
+        });
+
+
+        txtRegistrate.setOnClickListener(v -> {
+            startActivity(new Intent(IniciarSesion.this, Registrarse.class));
+            finish();
         });
     }
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Foto de perfil del autor -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivPerfil"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/perfil"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/tvAutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de usuario"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Imagen del post / cambiar :placeholder_image-->
+        <ImageView
+            android:id="@+id/ivPostImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_petmatch"/>
+
+        <!-- Descripción del post -->
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Esta es una descripción del post..."/>
+
+        <!-- Botón de me gusta -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivLike"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_heart"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:id="@+id/tvLikesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123 Me gusta"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

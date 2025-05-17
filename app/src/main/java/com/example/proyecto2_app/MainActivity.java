@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn_iniciar_session = findViewById(R.id.btn_iniciar_sesion );
         Button btn_registrarse = findViewById(R.id. btn_registrarse);
+        Button btn_pase = findViewById(R.id.btnPase);
         miScrollView = findViewById(R.id.miScrollView);
 
 
@@ -42,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Registrarse.class);
                 startActivity(intent); // Inicia la nueva actividad
+            }
+        });
+
+        btn_pase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PaginaInicio.class);
+                startActivity(intent);
+
             }
         });
 

@@ -7,17 +7,26 @@ public class Usuario {
     private String tipo_usuario;
     private String codigo_postal;
 
+    // añadidos para editarpefil.java
+    private String descripcion;
+    private String foto_url;
+
     // Constructor vacío (necesario para Retrofit)
     public Usuario() {
     }
 
     // Constructor con parámetros
-    public Usuario(String nombre, String email, String contraseña, String tipo_usuario, String codigo_postal) {
+    public Usuario(String nombre, String email, String contraseña, String tipo_usuario, String codigo_postal, String descripcion, String foto_url) {
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
         this.tipo_usuario = tipo_usuario;
         this.codigo_postal = codigo_postal;
+        this.descripcion = descripcion;
+        this.foto_url = foto_url;
+    }
+
+    public Usuario(String nombreUsuario, String correo, String contrasena, String personal, String s) {
     }
 
     // Getters y Setters
@@ -60,4 +69,10 @@ public class Usuario {
     public void setCodigoPostal(String codigo_postal) {
         this.codigo_postal = codigo_postal;
     }
+
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+
+    public String getFoto_url() { return foto_url; }
+    public void setFoto_url(String foto_url) { this.foto_url = foto_url; }
 }
