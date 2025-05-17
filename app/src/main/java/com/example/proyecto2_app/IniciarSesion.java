@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,15 +17,29 @@ import java.io.IOException;
 public class IniciarSesion extends AppCompatActivity {
 
     private EditText edtCorreo, edtContrasena;
+    private CheckBox cbMantenerSesion;
+    private SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
 
+        sessionManager = SessionManager.getInstance(this);
+
+        //verificar si ya esta loegado
+        if (sessionManager.isLoggedIn()) {
+            irAPaginaInicio();
+            return;
+        }
+
         edtCorreo = findViewById(R.id.edtCorreo);
         edtContrasena = findViewById(R.id.edtContrasena);
+        cbMantenerSesion = findViewById(R.id.cbMantenerSesion);
         Button btnEntrar = findViewById(R.id.btnEntrar);
+
+        //configurar chek box
+        cbMantenerSesion.setChecked(sessionManager.shouldRememberMe());
 
         btnEntrar.setOnClickListener(v -> {
             String correo = edtCorreo.getText().toString().trim();
@@ -34,7 +49,11 @@ public class IniciarSesion extends AppCompatActivity {
                 return;
             }
 
-            iniciarSesion(correo, contrasena);
+            iniciarSesion(correo, contrasena, cbMantenerSesion.isChecked());
+        });
+
+        findViewById(R.id.txtRegistrate).setOnClickListener(v -> {
+            startActivity(new Intent(this, Registrarse.class));
         });
     }
 
@@ -59,7 +78,7 @@ public class IniciarSesion extends AppCompatActivity {
         return true;
     }
 
-    private void iniciarSesion(String correo, String contrasena) {
+    private void iniciarSesion(String correo, String contrasena, boolean recordarSesion) {
         ApiService apiService = RetrofitClient.getApiService();
         Call<LoginResponse> call = apiService.iniciarSesion(correo, contrasena);
 
@@ -69,8 +88,19 @@ public class IniciarSesion extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     LoginResponse loginResponse = response.body();
                     if (loginResponse != null && loginResponse.getMensaje().equals("Inicio de sesión exitoso")) {
-                        startActivity(new Intent(IniciarSesion.this, PaginaInicio.class));
-                        finish();
+                        // Guardar datos del usuario en la sesión
+                        Usuario usuario = loginResponse.getUsuario();
+                        if (usuario != null) {
+                            sessionManager.createLoginSession(
+                                    usuario.getIdUsuario(),
+                                    usuario.getNombre(),
+                                    usuario.getEmail(),
+                                    usuario.getTipoUsuario(),
+                                    recordarSesion
+                            );
+                        }
+
+                        irAPaginaInicio();
                     } else {
                         mostrarError("Credenciales incorrectas");
                     }
@@ -91,6 +121,13 @@ public class IniciarSesion extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
+    }
+
+    private void irAPaginaInicio() {
+        Intent intent = new Intent(IniciarSesion.this, PaginaInicio.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 
     private void mostrarError(String mensaje) {

@@ -1,6 +1,10 @@
 package com.example.proyecto2_app;
+import com.google.gson.annotations.SerializedName;
+
 
 public class Usuario {
+    @SerializedName("id_usuario")
+    private int id;
     private String nombre;
     private String email;
     private String contraseña;
@@ -59,5 +63,9 @@ public class Usuario {
 
     public void setCodigoPostal(String codigo_postal) {
         this.codigo_postal = codigo_postal;
+    }
+
+    public int getIdUsuario() {
+        return id;
     }
 }
