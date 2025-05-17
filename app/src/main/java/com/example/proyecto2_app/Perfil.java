@@ -1,6 +1,8 @@
 package com.example.proyecto2_app;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,11 +17,16 @@ public class Perfil extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_perfil);
 
+        ImageButton btnAjustes = findViewById(R.id.SettingsButton);
+
         // Obtener referencia al BottomNavigationView
         BottomNavigationView bottomNav = findViewById(R.id.bottom_nav_view);
 
-        // Configurar la navegación usando el método reutilizable
         NavegacionBarra.setupBottomNavigationView(bottomNav, this);
 
+        btnAjustes.setOnClickListener(v -> {
+            startActivity(new Intent(Perfil.this, Ajustes.class));
+
+        });
     }
 }

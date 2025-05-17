@@ -37,6 +37,16 @@ public class Registrarse extends AppCompatActivity {
         btnSiguiente = findViewById(R.id.btnSiguiente);
         txtIniciarSesion = findViewById(R.id.txtIniciarSesion);
 
+        btnSaberMas = findViewById(R.id.btnSaberMas);
+
+        btnSaberMas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MasSobreUser.class);
+                startActivity(intent);
+            }
+        });
+
         btnSiguiente.setOnClickListener(v -> {
             String nombreUsuario = edtNombreUsuario.getText().toString().trim();
             String correo = edtCorreo.getText().toString().trim();
