@@ -120,6 +120,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtCorreo" />
 
+    <CheckBox
+        android:id="@+id/cbMantenerSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="124dp"
+        android:buttonTint="@android:color/white"
+        android:text="@string/mantener_sesion_iniciada"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/btnEntrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginStart="20dp" />
+
     <TextView
         android:id="@+id/txtOlvidarContrasena"
         android:layout_width="wrap_content"
@@ -131,6 +144,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"/>
+
+
 
     <!-- Botón Entrar -->
     <Button
