@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Tienda">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/bademhvcxc"
-        android:layout_width="303dp"
-        android:layout_height="71dp"
-        android:text="pagina tineda"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="205dp" />
+        android:id="@+id/textDestacado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destacado"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="46dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <GridLayout
+        android:id="@+id/gridProductos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="12dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/textDestacado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <include
         layout="@layout/bottom_nav"

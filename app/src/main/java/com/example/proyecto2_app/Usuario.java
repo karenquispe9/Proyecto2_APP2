@@ -20,7 +20,7 @@ public class Usuario {
     }
 
     // Constructor con parámetros
-    public Usuario(String nombre, String email, String contraseña, String tipo_usuario, String codigo_postal) {
+    public Usuario(String nombre, String email, String contraseña, String tipo_usuario, String codigo_postal, String descripcion, String foto_url) {
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
@@ -29,6 +29,17 @@ public class Usuario {
         this.descripcion = descripcion;
         this.foto_url = foto_url;
     }
+
+    public Usuario(String nombre, String email, String contraseña, String tipo_usuario, String codigo_postal) {
+        this.nombre = nombre;
+        this.email = email;
+        this.contraseña = contraseña;
+        this.tipo_usuario = tipo_usuario;
+        this.codigo_postal = codigo_postal;
+        this.descripcion = "";
+        this.foto_url = "";
+    }
+
 
 
 

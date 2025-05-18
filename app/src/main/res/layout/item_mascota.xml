@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/item_mascota.xml -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:contentPadding="8dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Contenido del item -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <!-- Foto de la mascota -->
+        <ImageView
+            android:id="@+id/fotoMascota"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circular_image"/>
+
+        <!-- Nombre de la mascota -->
+        <TextView
+            android:id="@+id/nombreMascota"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nombre Mascota"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black" />
+
+        <!-- Botón de edición -->
+        <ImageButton
+            android:id="@+id/editarMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lapiz"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Editar Mascota"
+            android:layout_marginLeft="16dp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

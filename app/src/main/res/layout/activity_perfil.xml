@@ -23,7 +23,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/perfilmascota_button"
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="@color/white"
+            android:contentDescription="desplegable mascotas"/>
+
+
 
         <TextView
             android:id="@+id/PaginaPerfil"
@@ -40,200 +43,185 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/settings_button"
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="@color/white"
+            android:contentDescription="settings"/>
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/CardViewDatosPerfil"
-        android:layout_width="415dp"
-        android:layout_height="295dp"
-        app:cardElevation="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/ScrollPublicaciones"
+    <LinearLayout
+        android:id="@+id/DatosPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
         app:layout_constraintTop_toBottomOf="@id/BarraPerfil"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
-            android:id="@+id/DatosPerfil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="422dp"
+            android:layout_height="300dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="422dp"
-                android:layout_height="300dp">
+            <ImageButton
+                android:id="@+id/FotoPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/fotoperfil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="image"/>
 
-                <ImageButton
-                    android:id="@+id/FotoPerfil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"
-                    android:backgroundTint="@color/white"
-                    android:src="@drawable/fotoperfil"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/NombreUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_black"
+                android:text="usuario"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                app:layout_constraintStart_toEndOf="@id/FotoPerfil"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/NombreUsuario"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/lato_black"
-                    android:text="usuario"
-                    android:textColor="@color/black"
-                    android:textSize="25dp"
-                    app:layout_constraintStart_toEndOf="@id/FotoPerfil"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/Descripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:text="Descripcion"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@id/FotoPerfil"
+                app:layout_constraintTop_toBottomOf="@id/NombreUsuario" />
+            <!--publicaciones-->
 
-                <TextView
-                    android:id="@+id/Descripcion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Descripcion"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    app:layout_constraintStart_toEndOf="@id/FotoPerfil"
-                    app:layout_constraintTop_toBottomOf="@id/NombreUsuario" />
-                <!--publicaciones-->
+            <TextView
+                android:id="@+id/NumPublicaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="12"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FotoPerfil" />
 
-                <TextView
-                    android:id="@+id/NumPublicaciones"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginTop="30dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="12"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/FotoPerfil" />
+            <!--seguidores-->
 
-                <!--seguidores-->
+            <TextView
+                android:id="@+id/TextPublicaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Publicaciones"
+                app:layout_constraintEnd_toStartOf="@id/TextSeguidores"
+                app:layout_constraintHorizontal_bias="0.365"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/NumPublicaciones" />
 
-                <TextView
-                    android:id="@+id/TextPublicaciones"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="Publicaciones"
-                    app:layout_constraintEnd_toStartOf="@id/TextSeguidores"
-                    app:layout_constraintHorizontal_bias="0.365"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/NumPublicaciones" />
+            <!--seguidos-->
 
-                <!--seguidos-->
+            <TextView
+                android:id="@+id/NumSeguidores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="108dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="300"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/NumPublicaciones"
+                app:layout_constraintTop_toBottomOf="@id/FotoPerfil" />
 
-                <TextView
-                    android:id="@+id/NumSeguidores"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="108dp"
-                    android:layout_marginTop="30dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="300"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@id/NumPublicaciones"
-                    app:layout_constraintTop_toBottomOf="@id/FotoPerfil" />
+            <TextView
+                android:id="@+id/TextSeguidores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Seguidores"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/TextSeguidos"
+                app:layout_constraintTop_toBottomOf="@+id/NumSeguidores"
+                app:layout_constraintVertical_bias="0.252" />
 
-                <TextView
-                    android:id="@+id/TextSeguidores"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="60dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="Seguidores"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/TextSeguidos"
-                    app:layout_constraintTop_toBottomOf="@+id/NumSeguidores"
-                    app:layout_constraintVertical_bias="0.252" />
+            <TextView
+                android:id="@+id/NumSeguidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="200"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/NumSeguidores"
+                app:layout_constraintTop_toBottomOf="@+id/FotoPerfil" />
 
-                <TextView
-                    android:id="@+id/NumSeguidos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="76dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="60dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="200"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/NumSeguidores"
-                    app:layout_constraintTop_toBottomOf="@+id/FotoPerfil" />
+            <TextView
+                android:id="@+id/TextSeguidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Seguidos"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NumSeguidos"
+                app:layout_constraintVertical_bias="0.252" />
 
-                <TextView
-                    android:id="@+id/TextSeguidos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="60dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="Seguidos"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/NumSeguidos"
-                    app:layout_constraintVertical_bias="0.252" />
+            <Button
+                android:id="@+id/Publicaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/lato_regular"
+                android:text="PUBLICACIONES"
+                android:textColor="@color/letra_boton_naranja"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TextMascota"
+                app:layout_constraintTop_toBottomOf="@+id/TextSeguidores"
+                app:layout_constraintVertical_bias="0.695" />
 
-                <TextView
-                    android:id="@+id/Publicaciones"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="84dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="PUBLICACIONES"
-                    android:textColor="@color/letra_boton_naranja"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/TextMascota"
-                    app:layout_constraintTop_toBottomOf="@+id/TextSeguidores"
-                    app:layout_constraintVertical_bias="0.666" />
-
-                <TextView
-                    android:id="@+id/TextMascota"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="36dp"
-                    android:layout_marginEnd="84dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="MASCOTAS"
-                    android:textColor="@color/letra_boton_naranja"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/TextSeguidores" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="80dp"
-                    android:layout_marginTop="11dp"
-                    android:src="@drawable/linea_seleccion"
-                    app:layout_constraintEnd_toStartOf="@id/TextMascota"
-                    app:layout_constraintTop_toBottomOf="@id/Publicaciones" />
+            <Button
+                android:id="@+id/TextMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="48dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/lato_regular"
+                android:text="MASCOTAS"
+                android:textColor="@color/letra_boton_naranja"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TextSeguidores" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/ScrollPublicaciones"
-        android:layout_width="414dp"
-        android:layout_height="448dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPerfil"
+        android:layout_width="416dp"
+        android:layout_height="0dp"
         android:background="@color/fondo_gris"
         app:layout_constraintBottom_toTopOf="@id/bottom"
-        app:layout_constraintTop_toBottomOf="@+id/CardViewDatosPerfil"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:ignore="MissingConstraints">
-
-    </ScrollView>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DatosPerfil" />
 
     <include
         layout="@layout/bottom_nav"
@@ -244,4 +232,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <include
+        layout="@layout/menu_mascotas"
+        android:id="@+id/menuMascotas"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/DatosPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btn_pase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PaginaInicio.class);
+                Intent intent = new Intent(MainActivity.this, Perfil.class);
                 startActivity(intent);
 
             }
