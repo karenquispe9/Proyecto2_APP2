@@ -1,0 +1,38 @@
+[33m9484330[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mkaren[m[33m, [m[1;31morigin/karen[m[33m)[m HEAD@{0}: commit (merge): revisar
+[33m20e12a4[m HEAD@{1}: commit: revisar
+[33mbc0e3e2[m HEAD@{2}: commit (merge): canvi icon
+[33m0b49eff[m HEAD@{3}: commit: falta revisar
+[33ma2c49e3[m HEAD@{4}: commit (merge): SaberMas incompleto2
+[33mb04b388[m HEAD@{5}: commit: SaberMas incompleto
+[33m8a85940[m HEAD@{6}: commit: modificicaio
+[33m58969bc[m HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+[33m8ccaa14[m HEAD@{8}: pull origin main: Merge made by the 'ort' strategy.
+[33mda98a95[m HEAD@{9}: commit: scroll inicio arreglado
+[33ma3dd676[m HEAD@{10}: commit: canvi nom clases
+[33m38a28b3[m HEAD@{11}: commit: button conectado
+[33m0a89205[m HEAD@{12}: commit: botton arreglado
+[33mf9da214[m HEAD@{13}: commit: rounded_button cambio de color
+[33mca83877[m HEAD@{14}: pull origin karen: Fast-forward
+[33mdf0b6f6[m HEAD@{15}: pull origin main: Fast-forward
+[33m0893c77[m HEAD@{16}: pull origin main: Fast-forward
+[33m84dc2b9[m HEAD@{17}: commit: merge de pau y karen
+[33m798b089[m HEAD@{18}: pull origin main: Merge made by the 'ort' strategy.
+[33m2f48e88[m HEAD@{19}: reset: moving to HEAD
+[33m2f48e88[m HEAD@{20}: pull origin main: updating HEAD
+[33m2f48e88[m HEAD@{21}: pull origin main: updating HEAD
+[33m2f48e88[m HEAD@{22}: pull origin main: Merge made by the 'ort' strategy.
+[33m2212912[m HEAD@{23}: pull origin main: Merge made by the 'ort' strategy.
+[33m994c64e[m HEAD@{24}: commit: cambios de pantalla registro
+[33m58aa2da[m HEAD@{25}: commit: en javaa
+[33m4104d62[m HEAD@{26}: checkout: moving from main to karen
+[33mf675025[m[33m ([m[1;31morigin/pau[m[33m, [m[1;32mmain[m[33m)[m HEAD@{27}: checkout: moving from pau to main
+[33mf675025[m[33m ([m[1;31morigin/pau[m[33m, [m[1;32mmain[m[33m)[m HEAD@{28}: checkout: moving from karen to pau
+[33m4104d62[m HEAD@{29}: commit: falta acabar registro
+[33m3257a6b[m HEAD@{30}: commit: inicio de sesion xml acabado
+[33m9dc56a6[m HEAD@{31}: commit: añadidida tipografia, colores de fondo y botones, xml bienvenida acabado
+[33mf675025[m[33m ([m[1;31morigin/pau[m[33m, [m[1;32mmain[m[33m)[m HEAD@{32}: checkout: moving from main to karen
+[33mf675025[m[33m ([m[1;31morigin/pau[m[33m, [m[1;32mmain[m[33m)[m HEAD@{33}: commit: repo creado
+[33mbe50e05[m HEAD@{34}: Branch: renamed refs/heads/master to refs/heads/main
+[33mbe50e05[m HEAD@{36}: checkout: moving from main to master
+[33mbe50e05[m HEAD@{37}: checkout: moving from master to main
+[33mbe50e05[m HEAD@{38}: commit (initial): primer commit
