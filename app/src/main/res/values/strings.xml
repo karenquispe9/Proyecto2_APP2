@@ -26,8 +26,4 @@
     <string name="nuevo_post">Nuevo POST</string>
 
     <string name="foto6" />
-    <string name="selecciona_una_opci_n">Selecciona una opción</string>
-    <string name="selecciona_una_opcion_del_desplegable">Selecciona una opción del desplegable</string>
-    <string name="tipo_de_cuenta">TIPO DE CUENTA</string>
-    <string name="queremos_saber_mas_sobre_ti">Queremos saber mas sobre ti!</string>
 </resources>

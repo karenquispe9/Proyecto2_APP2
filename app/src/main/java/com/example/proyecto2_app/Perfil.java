@@ -1,6 +1,5 @@
 package com.example.proyecto2_app;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,6 +49,7 @@ public class Perfil extends AppCompatActivity {
         // Obtener referencia al BottomNavigationView
         BottomNavigationView bottomNav = findViewById(R.id.bottom_nav_view);
 
+        // Configurar la navegación usando el método reutilizable
         NavegacionBarra.setupBottomNavigationView(bottomNav, this);
 
         btnAjustes.setOnClickListener(v -> {
@@ -119,34 +119,4 @@ public class Perfil extends AppCompatActivity {
             recyclerView.setAdapter(mascotaAdapter);
         });
     }
-
-    private void toggleMenu() {
-        if (!menuVisible) {
-            menuMascotas.setVisibility(View.VISIBLE);
-            menuVisible = true;
-        } else {
-            menuMascotas.setVisibility(View.GONE);
-            menuVisible = false;
-        }
-    }
-
-    // Metodo simulado para cargar posts del usuario
-    private List<Post> obtenerPostsDelUsuario() {
-        List<Post> lista = new ArrayList<>();
-        lista.add(new Post(1, "Mi perro favorito", "https://example.com/perro.jpg", 0, 0));
-        lista.add(new Post(2, "Vacaciones con mi gato", "https://example.com/gato.jpg", 0, 0));;
-        return lista;
-    }
-
-    // Metodo simulado para cargar mascotas del usuario
-    private List<Mascota> obtenerMascotasDelUsuario() {
-        List<Mascota> lista = new ArrayList<>();
-        lista.add(new Mascota("Max", "Perro", "Golden Retriever", "2020-05-10", "Macho", "Grande", null));
-        lista.add(new Mascota("Luna", "Gato", "Persa", "2019-03-15", "Hembra", "Pequeño", null));
-        return lista;
-    }
-
-
-
-
- }
+}

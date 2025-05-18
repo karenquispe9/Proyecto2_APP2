@@ -40,9 +40,6 @@ public class Usuario {
         this.foto_url = "";
     }
 
-
-
-
     // Getters y Setters
     public String getNombre() {
         return nombre;

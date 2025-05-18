@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,10 +58,8 @@ public class IniciarSesion extends AppCompatActivity {
             startActivity(new Intent(this, Registrarse.class));
         });
 
-
-        txtRegistrate.setOnClickListener(v -> {
-            startActivity(new Intent(IniciarSesion.this, Registrarse.class));
-            finish();
+        findViewById(R.id.txtRegistrate).setOnClickListener(v -> {
+            startActivity(new Intent(this, Registrarse.class));
         });
     }
 
@@ -87,7 +84,7 @@ public class IniciarSesion extends AppCompatActivity {
         return true;
     }
 
-    private void iniciarSesion(String correo, String contrasena, boolean checked) {
+    private void iniciarSesion(String correo, String contrasena, boolean recordarSesion) {
         ApiService apiService = RetrofitClient.getApiService();
         Call<LoginResponse> call = apiService.iniciarSesion(correo, contrasena);
 
@@ -105,7 +102,7 @@ public class IniciarSesion extends AppCompatActivity {
                                     usuario.getNombre(),
                                     usuario.getEmail(),
                                     usuario.getTipoUsuario(),
-                                    checked
+                                    recordarSesion
                             );
                         }
 

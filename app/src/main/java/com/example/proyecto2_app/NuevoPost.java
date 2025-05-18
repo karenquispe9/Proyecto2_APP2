@@ -156,7 +156,7 @@ public class NuevoPost extends AppCompatActivity {
         try {
             File imageFile = FileUtil.from(this, imageUri);
             RequestBody requestFile = RequestBody.create(MediaType.parse("image/*"), imageFile);
-            MultipartBody.Part imagePart = MultipartBody.Part.createFormData("file", imageFile.getName(), requestFile);
+            MultipartBody.Part imagePart = MultipartBody.Part.createFormData("foto_publicacion", imageFile.getName(), requestFile);
 
             RequestBody userIdBody = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(userId));
             RequestBody contenidoBody = RequestBody.create(MediaType.parse("text/plain"), contenido);

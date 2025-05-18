@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         Button btn_pase = findViewById(R.id.btnPase);
         miScrollView = findViewById(R.id.miScrollView);
 
-
         btn_iniciar_session.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         checkPhotoPermissionOnce();
     }
 
+
+    // Runnable para hacer scroll automáticamente
     private final Runnable autoScrollRunnable = new Runnable() {
         @Override
         public void run() {
