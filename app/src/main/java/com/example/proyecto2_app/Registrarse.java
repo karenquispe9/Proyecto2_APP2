@@ -16,36 +16,22 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Registrarse extends AppCompatActivity {
-
     private EditText edtNombreUsuario, edtCorreo, edtContrasena;
     private CheckBox checkBoxTerminos;
     private Button btnSiguiente;
     private TextView txtIniciarSesion;
-    //eliminar
-    private Button btnSaberMas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrarse);
 
-        // Inicializar vistas
         edtNombreUsuario = findViewById(R.id.NomUser);
         edtCorreo = findViewById(R.id.edtCorreo);
         edtContrasena = findViewById(R.id.edtContrasena);
         checkBoxTerminos = findViewById(R.id.terms_checkbox);
         btnSiguiente = findViewById(R.id.btnSiguiente);
         txtIniciarSesion = findViewById(R.id.txtIniciarSesion);
-
-        btnSaberMas = findViewById(R.id.btnSaberMas);
-
-        btnSaberMas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MasSobreUser.class);
-                startActivity(intent);
-            }
-        });
 
         btnSiguiente.setOnClickListener(v -> {
             String nombreUsuario = edtNombreUsuario.getText().toString().trim();
@@ -70,10 +56,7 @@ public class Registrarse extends AppCompatActivity {
     }
 
     private void registrarUsuario(Usuario usuario) {
-        // Obtener el servicio de la API
         ApiService apiService = RetrofitClient.getApiService();
-
-        // Realizar la solicitud POST
         Call<Void> call = apiService.registrarUsuario(usuario);
         call.enqueue(new Callback<Void>() {
             @Override

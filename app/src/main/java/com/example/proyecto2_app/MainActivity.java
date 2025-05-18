@@ -30,11 +30,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        Button btn_iniciar_session = findViewById(R.id.btn_iniciar_sesion );
-        Button btn_registrarse = findViewById(R.id. btn_registrarse);
-        Button btn_pase = findViewById(R.id.btnPase);
-
+        Button btn_iniciar_session = findViewById(R.id.btn_iniciar_sesion);
+        Button btn_registrarse = findViewById(R.id.btn_registrarse);
         miScrollView = findViewById(R.id.miScrollView);
 
         btn_iniciar_session.setOnClickListener(new View.OnClickListener() {
@@ -52,18 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        btn_pase.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PaginaInicio.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-        // Verifica que el ScrollView tiene contenido antes de iniciar el auto-scroll
 
         if (miScrollView.getChildAt(0) != null) {
             iniciarAutoScroll();

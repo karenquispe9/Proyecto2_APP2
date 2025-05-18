@@ -52,4 +52,11 @@ dependencies {
     implementation(libs.glide)
     annotationProcessor(libs.glideCompiler)
     implementation(libs.circleimageview)
+    implementation(libs.swiperefreshlayout)
+    implementation(libs.glide)
+    implementation(libs.glide.okhttp)
+    annotationProcessor(libs.glideCompiler)
+    implementation(libs.glide)
+    implementation(libs.glide.okhttp)
+    annotationProcessor(libs.glideCompiler)
 }
