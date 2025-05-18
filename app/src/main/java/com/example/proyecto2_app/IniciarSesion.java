@@ -7,7 +7,6 @@ import android.util.Patterns;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
@@ -18,7 +17,6 @@ import java.io.IOException;
 public class IniciarSesion extends AppCompatActivity {
 
     private EditText edtCorreo, edtContrasena;
-    private TextView txtRegistrate;
     private CheckBox cbMantenerSesion;
     private SessionManager sessionManager;
 
@@ -39,7 +37,6 @@ public class IniciarSesion extends AppCompatActivity {
         edtContrasena = findViewById(R.id.edtContrasena);
         cbMantenerSesion = findViewById(R.id.cbMantenerSesion);
         Button btnEntrar = findViewById(R.id.btnEntrar);
-        txtRegistrate = findViewById(R.id.txtRegistrate);
 
         //configurar chek box
         cbMantenerSesion.setChecked(sessionManager.shouldRememberMe());
@@ -57,12 +54,6 @@ public class IniciarSesion extends AppCompatActivity {
 
         findViewById(R.id.txtRegistrate).setOnClickListener(v -> {
             startActivity(new Intent(this, Registrarse.class));
-        });
-
-
-        txtRegistrate.setOnClickListener(v -> {
-            startActivity(new Intent(IniciarSesion.this, Registrarse.class));
-            finish();
         });
     }
 
