@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
             android:layout_marginStart="10dp"
-            android:text="Actividad de la cuenta"
+            android:text="@string/actividad_de_la_cuenta"
             android:textSize="30dp"
             android:fontFamily="@font/lalezar_regular"
             android:textColor="@color/black"/>
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:fontFamily="@font/lalezar_regular"
-        android:text="Me gusta"
+        android:text="@string/me_gusta"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Me gustas"
+            android:text="@string/mis_me_gustas"
             android:textSize="16sp"
             android:textColor="#333333"
             android:paddingStart="16dp" />

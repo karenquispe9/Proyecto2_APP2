@@ -33,7 +33,7 @@
             android:layout_marginEnd="15dp"
             android:layout_marginStart="10dp"
             android:gravity="center"
-            android:text="Editar Perfil"
+            android:text="@string/editar_perfil_titulo"
             android:textSize="40sp"
             android:fontFamily="@font/lalezar_regular"
             android:textColor="@color/white"/>
@@ -59,7 +59,7 @@
             android:id="@+id/btnCambiarFoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cambiar foto"
+            android:text="@string/cambiar_foto"
             android:layout_marginTop="8dp"
             android:textColor="@color/black"
             android:backgroundTint="@color/white"/>
@@ -93,7 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Nombre:"
+                    android:text="@string/nombre_editar_perfil"
                     android:textColor="@color/black" />
 
                 <EditText
@@ -107,7 +107,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Descripción:"
+                    android:text="@string/descripci_n"
                     android:textColor="@color/black" />
 
                 <EditText
@@ -127,7 +127,7 @@
         android:id="@+id/btnGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar Cambios"
+        android:text="@string/guardar_cambios"
         android:layout_marginTop="16dp"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"/>

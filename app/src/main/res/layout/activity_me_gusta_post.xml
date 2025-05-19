@@ -34,7 +34,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Mis Me Gusta"
+            android:text="@string/mis_me_gusta"
             android:textSize="25dp"
             android:textColor="@color/black"
             android:fontFamily="@font/lato_black"

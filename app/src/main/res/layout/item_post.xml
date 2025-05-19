@@ -31,7 +31,7 @@
                 android:id="@+id/tvAutor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre de usuario"
+                android:text="@string/nombre_de_usuario_post"
                 android:textStyle="bold"/>
         </LinearLayout>
 
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Esta es una descripción del post..."/>
+            android:text="@string/esta_es_una_descripci_n_del_post"/>
 
         <!-- Botón de me gusta -->
         <LinearLayout
@@ -71,7 +71,7 @@
                 android:id="@+id/tvLikesCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="123 Me gusta"/>
+                android:text="@string/_123_me_gusta"/>
         </LinearLayout>
 
     </LinearLayout>

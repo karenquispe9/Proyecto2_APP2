@@ -15,7 +15,7 @@
         android:id="@+id/editTextSearch"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:hint="Buscar"
+        android:hint="@string/buscar"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:drawableStart="@drawable/ic_search"

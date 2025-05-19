@@ -23,14 +23,14 @@
             android:layout_height="wrap_content"
             android:src="@drawable/atras"
             android:backgroundTint="@color/white"
-            android:contentDescription="atras"/>
+            android:contentDescription="@string/atras"/>
 
         <TextView
             android:id="@+id/TextAjustes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Ajustes"
+            android:text="@string/ajustes"
             android:textSize="45dp"
             android:fontFamily="@font/lalezar_regular"
             android:textColor="@color/black"/>
@@ -56,7 +56,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Configuración de la cuenta"
+            android:text="@string/configuraci_n_de_la_cuenta"
             android:textSize="16sp"
             android:textColor="#333333"
             android:paddingStart="16dp" />
@@ -89,7 +89,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Actividad"
+            android:text="@string/actividad"
             android:textSize="16sp"
             android:textColor="#333333"
             android:paddingStart="16dp" />
@@ -122,7 +122,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Editar perfil"
+            android:text="@string/editar_perfil"
             android:textSize="16sp"
             android:textColor="#333333"
             android:paddingStart="16dp" />
@@ -140,7 +140,7 @@
         android:id="@+id/bnCerrarSession"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Cerrar Sesion"
+        android:text="@string/cerrar_sesion"
         android:backgroundTint="@color/letra_boton_naranja"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

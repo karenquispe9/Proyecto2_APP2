@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="PetMatch"
+                android:text="@string/petmatch"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"

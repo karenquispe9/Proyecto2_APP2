@@ -20,7 +20,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Usuario"
+        android:text="@string/usuario_buscar"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginStart="12dp"

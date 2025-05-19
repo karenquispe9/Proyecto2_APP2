@@ -32,20 +32,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nombre Mascota"
+            android:text="@string/nombre_mascota_item"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
             android:textColor="@color/black" />
 
-        <!-- Botón de edición -->
-        <ImageButton
-            android:id="@+id/editarMascota"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/lapiz"
-            android:backgroundTint="@color/white"
-            android:contentDescription="Editar Mascota"
-            android:layout_marginLeft="16dp"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
